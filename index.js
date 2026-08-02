@@ -415,3 +415,15 @@ async function startCloningProcess(message, sourceGuild, targetGuild, opts) {
 
 bot.login(BOT_TOKEN).catch(() => console.error("Invalid Bot Token"));
 userClient.login(DC_TOKEN).catch(() => console.error("Invalid User Token"));
+
+// Add a simple HTTP server to keep Render happy and prevent crashes
+const http = require('http');
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Roxy Cloner Bot is running 24/7!\n');
+});
+
+const PORT = process.env.PORT || 10000;
+server.listen(PORT, () => {
+  console.log(`HTTP server is listening on port ${PORT}`);
+});
