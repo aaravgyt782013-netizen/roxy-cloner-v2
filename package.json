@@ -8,10 +8,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.x.x",
+    "discord.js-selfbot-v13": "^13.14.3",
+    "dotenv": "^16.4.5"
+  }
 }
-"dependencies": {
-  "discord.js": "^14.x.x",
-  "discord.js-selfbot-v13": "^...",
-  "dotenv": "^16.4.5"
-}
-  
