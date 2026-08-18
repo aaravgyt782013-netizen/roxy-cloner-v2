@@ -10,8 +10,9 @@
   "license": "ISC",
 
   "dependencies": {
-  "discord.js": "^14.x.x",
-  "discord.js-selfbot-v13": "latest",
-  "dotenv": "^16.4.5"
+    "discord.js": "^14.x.x",
+    "discord.js-selfbot-v13": "latest",
+    "dotenv": "^16.4.5"
   }
+
   
