@@ -1,3 +1,6 @@
+const express = require('express');
+const app = express();
+
 process.on('uncaughtException', (err) => {
     console.error('CRITICAL UNCAUGHT EXCEPTION:', err);
     process.exit(1);
