@@ -407,8 +407,8 @@ async function startCloningProcess(message, sourceGuild, targetGuild, opts) {
     await message.author.send("Cloning completed successfully!");
 }
 
-bot.login(BOT_TOKEN).catch(() => console.error("Invalid Bot Token"));
-userClient.login(DC_TOKEN).catch(() => console.error("Invalid User Token"));
+bot.login(process.env.BOT_TOKEN).catch((err) => console.error("Bot Login Error:", err));
+userClient.login(process.env.DC_TOKEN).catch((err) => console.error("User Client Login Error:", err));
 
 const express = require('express');
 const app = express();
