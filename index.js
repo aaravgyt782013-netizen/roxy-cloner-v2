@@ -1,3 +1,12 @@
+process.on('uncaughtException', (err) => {
+    console.error('CRITICAL UNCAUGHT EXCEPTION:', err);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('CRITICAL UNHANDLED REJECTION:', reason);
+    process.exit(1);
+});
 const origLog = console.log;
 console.log = () => { };
 require('dotenv').config();
