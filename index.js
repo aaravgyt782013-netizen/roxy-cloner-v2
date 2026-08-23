@@ -421,5 +421,5 @@ userClient.login(process.env.DC_TOKEN)
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Spidey-Cloner running on port ${PORT}`);
 });
