@@ -409,17 +409,13 @@ async function startCloningProcess(message, sourceGuild, targetGuild, opts) {
 
 console.log("Reached the bottom of index.js, attempting login...");
 
-bot.login(process.env.BOT_TOKEN).catch((err) => console.error("Bot Login Error:", err));
-userClient.login(process.env.DC_TOKEN).catch((err) => console.error("User Client Login Error:", err));
+console.log("Attempting bot login...");
+bot.login(process.env.BOT_TOKEN)
+  .then(() => console.log("Bot login successful!"))
+  .catch(err => console.error("Bot login failed:", err));
 
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
+console.log("Attempting user client login...");
+userClient.login(process.env.DC_TOKEN)
+  .then(() => console.log("User client login successful!"))
+  .catch(err => console.error("User client login failed:", err));
 
-app.get('/', (req, res) => {
-  res.send('Bot is alive!');
-});
-
-app.listen(PORT, () => {
-  console.log(`Web server listening on port ${PORT}`);
-});
