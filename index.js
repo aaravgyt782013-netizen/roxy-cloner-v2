@@ -407,6 +407,8 @@ async function startCloningProcess(message, sourceGuild, targetGuild, opts) {
     await message.author.send("Cloning completed successfully!");
 }
 
+console.log("Reached the bottom of index.js, attempting login...");
+
 bot.login(process.env.BOT_TOKEN).catch((err) => console.error("Bot Login Error:", err));
 userClient.login(process.env.DC_TOKEN).catch((err) => console.error("User Client Login Error:", err));
 
