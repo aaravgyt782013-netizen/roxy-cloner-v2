@@ -15,7 +15,7 @@ console.log = origLog;
 process.removeAllListeners('warning');
 
 const { Client: BotClient, GatewayIntentBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { Client: UserClient } = require('discord.js-selfbot-v13');
+const { Client: UserClient } = require('discord.js-selfbot-v13-siuuu');
 
 const bot = new BotClient({
     intents: [
