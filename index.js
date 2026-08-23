@@ -419,3 +419,7 @@ userClient.login(process.env.DC_TOKEN)
   .then(() => console.log("User client login successful!"))
   .catch(err => console.error("User client login failed:", err));
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
