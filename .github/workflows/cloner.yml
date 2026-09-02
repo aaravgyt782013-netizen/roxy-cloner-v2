@@ -1,4 +1,4 @@
-name: Roxy Cloner V2
+name: SpiderCloner
 
 on:
   workflow_dispatch:
