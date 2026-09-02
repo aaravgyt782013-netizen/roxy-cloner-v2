@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=transparent&fontColor=ff0000&text=Roxy%20cloner%20v2&fontSize=40&height=100&descAlignY=50&descAlign=50" alt="Roxy cloner v2" />
+  <img src="https://capsule-render.vercel.app/api?type=transparent&fontColor=ff0000&text=SpiderCloner&fontSize=40&height=100&descAlignY=50&descAlign=50" alt="SpiderCloner" />
 </p>
