@@ -43,8 +43,7 @@ const purple = '\x1b[35m';
 const reset = '\x1b[0m';
 
 console.clear();
-console.log(purple + `
-` + reset);
+console.log(purple + `\n` + reset);
 
 bot.once('ready', () => {
     console.log(purple + `Bot logged in as ${bot.user.tag}` + reset);
@@ -91,7 +90,7 @@ bot.on('messageCreate', async (message) => {
         }
 
         const embed = new EmbedBuilder()
-            .setTitle("Roxy Cloner V2 Setup")
+            .setTitle("SpiderCloner Setup")
             .setDescription(`Cloning from **${sourceGuild.name}** to **${targetGuild.name}**\n\n` +
                 `**1.** Delete Existing Channels\n` +
                 `**2.** Delete Existing Roles\n` +
@@ -433,5 +432,5 @@ userClient.login(process.env.DC_TOKEN)
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Spidey-Cloner running on port ${PORT}`);
+    console.log(`SpiderCloner running on port ${PORT}`);
 });
