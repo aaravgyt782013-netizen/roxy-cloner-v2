@@ -5,6 +5,14 @@ console.log = origLog;
 
 process.removeAllListeners('warning');
 
+const http = require('http');
+
+const PORT = process.env.PORT || 3000;
+http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Roxy Cloner V2 is running');
+}).listen(PORT, '0.0.0.0');
+
 const { Client: BotClient, GatewayIntentBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { Client: UserClient } = require('discord.js-selfbot-v13');
 
